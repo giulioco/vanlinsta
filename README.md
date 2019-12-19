@@ -1,4 +1,4 @@
-### Vanlinsta
+# Vanlinsta
 
 Vanly's Instagram Bot Template
 
@@ -7,7 +7,7 @@ Vanly's Instagram Bot Template
 To run the bot manually :
 
 ```bash
-python3 ./boy.py
+python3 ./bot.py
 ```
 
 To setup the crontab job
