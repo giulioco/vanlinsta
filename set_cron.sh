@@ -5,7 +5,7 @@ crontab -l > mycron
 #echo new cron into cron file
 if grep -qF "bot.py" mycron;then
    echo "Entry already exists for ./bot.py. Deleting existing entry...\n"
-   sed -i '' '/bot.py/d' ./mycron
+   sed '/bot.py/d' ./mycron > mycron
 else
    echo "Entry not found for bot.py"
 fi
