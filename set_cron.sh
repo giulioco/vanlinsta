@@ -5,7 +5,7 @@ crontab -l > mycron
 #echo new cron into cron file
 if grep -qF "bot.py" mycron;then
    echo "Entry already exists for ./bot.py. Deleting existing entry..."
-   sed '/bot.py/d' ./mycron > mycron
+   sed '/bot.py/d' ./mycron > mycron_new
 else
    echo "Entry not found for bot.py"
 fi
@@ -15,5 +15,5 @@ echo "Adding entry..."
 # Calls bot
 echo "0 8-23/2 * * * echo 'Executing script.' >> botcron.log ; sleep \${RANDOM:0:2%120}m ; cd ~ && /usr/bin/python3 ~/vanlinsta/bot.py >> ~/vanlinsta/bot.log 2>&1" >> mycron
 #install new cron file
-crontab mycron
-rm mycron
+crontab mycron_new
+rm mycron mycron_new
