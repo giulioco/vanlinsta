@@ -50,7 +50,7 @@ with smart_run(session):
                          amount=random.randint(20, 80), interact=True)
 
     session.unfollow_users(amount=random.randint(30, 100),
-                           InstapyFollowed=(True, "all"), style="FIFO",
+                           instapy_followed_enabled=(True, "all"), style="FIFO",
                            unfollow_after=90 * 60 * 60, sleep_delay=501)
 
     """ Joining Engagement Pods...
