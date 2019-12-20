@@ -13,7 +13,7 @@ echo "Adding entry..."
 # Sets crontab at minute 0 past every 2nd hour from 8 through 23
 # Sleeps between 0 and 119 minutes
 # Calls bot
-echo "0 8-23/2 * * * sleep \${RANDOM:0:2%120}m && cd ~ && /usr/bin/python3 ~/vanlinsta/bot.py >> /root/vanlinsta/bot.log 2>&1" >> ./mycron_new
+echo "0 8-23/2 * * * sleep \${RANDOM:0:2%120}m ; cd ~ ; /usr/bin/python3 ~/vanlinsta/bot.py >> ~/vanlinsta/bot.log 2>&1" >> ./mycron_new
 #install new cron file
 echo "Setting the crontab to the following"
 cat mycron_new
