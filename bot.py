@@ -53,18 +53,18 @@ with smart_run(session):
                            instapy_followed_enabled=(True, "all"), style="FIFO",
                            unfollow_after=90 * 60 * 60, sleep_delay=501)
 
-    """ Joining Engagement Pods...
-    """
-    photo_comments = ['Nice shot! @{}',
-                      'I love your profile! @{}',
-                      'Wonderful :thumbsup:',
-                      'Just incredible :open_mouth:',
-                      'What camera did you use @{}?',
-                      'Love your posts @{}',
-                      'Looks awesome @{}',
-                      'Getting inspired by you @{}',
-                      ':raised_hands: Yes!']
+    # """ Joining Engagement Pods...
+    # """
+    # photo_comments = ['Nice shot! @{}',
+    #                   'I love your profile! @{}',
+    #                   'Wonderful :thumbsup:',
+    #                   'Just incredible :open_mouth:',
+    #                   'What camera did you use @{}?',
+    #                   'Love your posts @{}',
+    #                   'Looks awesome @{}',
+    #                   'Getting inspired by you @{}',
+    #                   ':raised_hands: Yes!']
 
-    session.set_do_comment(enabled=True, percentage=95)
-    session.set_comments(photo_comments, media='Photo')
-    session.join_pods(topic='travel')
+    # session.set_do_comment(enabled=False, percentage=95)
+    # session.set_comments(photo_comments, media='Photo')
+    # session.join_pods(topic='travel')
