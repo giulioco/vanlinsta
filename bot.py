@@ -25,7 +25,7 @@ like_tag_list = ['vanlife', 'vanlifecommunity', 'vanlifemeetup', 'vandiaries', '
                  'vanliving', 'vanlifeideas', 'vanlifeproject', 'homeiswhereyouparkit', 'busconversion', 'vanbuild', 'vanlifemovement', 'vanlifediaries', 'vanlifesociety', 'vancrush', 'projectvanlife', 'vanlifeideas', 'ontheroad', 'livingsmall']
 
 
-accounts = ['vanlife.journal', 'vanlifevirals', 'travywild',
+accounts = ['vanlifediaries','j_bonde', 'mitch_cox', 'nasrvanlife', 'rochelleallen', 'vanlifeisawesome', 'vanlife.living', 'vanlife.culture', 'vanlifecamper', 'vanlifedistrict',  'vanlife.journal', 'vanlifevirals', 'travywild',
             'vanliferules', 'vanlife.living', 'thevanlifeapp', 'van_craft']
 
 # get a session!
@@ -36,20 +36,20 @@ session = InstaPy(username=insta_username,
 with smart_run(session):
     # settings
     session.set_relationship_bounds(enabled=True,
-                                    max_followers=30000)
+                                    max_followers=40000)
 
     session.set_dont_include(friends)
     session.set_dont_like(dont_likes)
 
-    session.set_user_interact(amount=2, randomize=True, percentage=15)
+    session.set_user_interact(amount=3, randomize=True, percentage=15)
     session.set_do_follow(enabled=True, percentage=40)
     session.set_do_like(enabled=True, percentage=75)
 
     # activity
     session.like_by_tags(random.sample(like_tag_list, 3),
-                         amount=random.randint(20, 80), interact=True)
+                         amount=random.randint(30, 90), interact=True)
 
-    session.unfollow_users(amount=random.randint(30, 100),
+    session.unfollow_users(amount=random.randint(50, 190),
                            instapy_followed_enabled=(True, "all"), style="FIFO",
                            unfollow_after=90 * 60 * 60, sleep_delay=501)
 
