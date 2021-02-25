@@ -8,6 +8,7 @@ if grep -qF "bot.py" mycron;then
    sed '/bot.py/d' ./mycron > ./mycron_new
 else
    echo "Entry not found for bot.py"
+   crontab -l > mycron_new
 fi
 echo "Adding entry..."
 # Sets crontab at minute 0 past every 2nd hour from 8 through 23
