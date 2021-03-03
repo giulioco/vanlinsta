@@ -1,10 +1,11 @@
 import random
+import os
 from instapy import InstaPy
 from instapy import smart_run
 
 # login credentials
 insta_username = 'vanlyapp'
-insta_password = '2N*7B1kvQ9KX#Psu'
+insta_password = os.environ[f'{insta_username}_psw']
 
 dont_likes = ['sex', 'nude', 'naked', 'beef', 'pork', 'seafood',
               'egg', 'chicken', 'cheese', 'sausage', 'lobster',
@@ -31,7 +32,7 @@ accounts = ['vanlifediaries','j_bonde', 'mitch_cox', 'nasrvanlife', 'rochelleall
 # get a session!
 session = InstaPy(username=insta_username,
                   password=insta_password,
-                  headless_browser=True)
+                  headless_browser=False)
 
 with smart_run(session):
     # settings
